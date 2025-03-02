@@ -226,6 +226,9 @@ img {
 
 
 /* Add shadow header */
+.shadow-header{
+  box-shadow: 0 4px 16px hsla(353,100%,8%, .1);
+}
 
 
 /* Active link */
@@ -322,7 +325,8 @@ img {
 }
 
 .home__tomato{
-  
+  left: -.5rem;
+  top: 2rem;
 }
 /*=============== BUTTON ===============*/
 .button{
@@ -343,12 +347,101 @@ img {
 }
 
 /*=============== ABOUT ===============*/
+.about{
+  background-color: var(--container-color);
+}
+
+.about__container{
+  row-gap: 2rem;
+  padding-bottom: 2rem;
+
+}
+.about__data{
+  position: absolute;
+  text-align: center;
+}
+
+.about__data .section__title{
+  margin-bottom: 1rem;
+}
+.about__description {
+  margin-bottom: 2rem;
+}
+.about__sticker {
+  width: 40px;
+  position: absolute;
+  right: 0;
+  bottom: 2rem;
+}
+
+.about__img{
+  width: 320px;
+  justify-self: center;
+  filter: var(--shadow-big-img);
+}
 
 
 /*=============== POPULAR ===============*/
+.popular__container {
+  grid-template-columns: 100%;
+  row-gap: 3rem;
+  padding-bottom: 2rem;
+}
 
+.popular__data .section__title {
+  margin-bottom: 1rem;
+}
+
+.popular__description {
+  text-align: center;
+}
+
+.popular__swiper {
+  position: relative;
+}
+
+.popular__dish {
+  width: 220px;
+  filter: var(--shadow-big-img);
+  position: absolute;
+  inset: 0;
+  top: -.85rem;
+  margin-inline: auto;
+}
+
+.popular__card,
+.popular_img {
+  width: 200px;
+}
+
+.popular__img{
+  transform: scale(.8) rotate(-90deg);
+  transition: transform .4s;
+}
+
+.popular__title {
+  font-size: var(--h3-font-size);
+  color: var(--first-color);
+  margin-top: 2rem;
+  text-align: center;
+  opacity: 0;
+  transition: opacity .4s;
+}
 
 /* Swiper class */
+.swiper {
+  margin-inline: initial;
+  overflow: visible;
+}
+
+/* Fix typo and set correct opacity */
+:is(.swiper-slide-active, .swiper-slide-duplicate-active) .popular__img {
+  transform: scale(1) rotate(0);
+}
+
+:is(.swiper-slide-active, .swiper-slide-duplicate-active) .popular__title {
+  opacity: 1; /* Corrected opacity */
+}
 
 
 

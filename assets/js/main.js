@@ -28,9 +28,20 @@ const linkAction = () => {
 navLink.forEach(n => n.addEventListener('click' , linkAction));
 
 /*=============== ADD SHADOW HEADER ===============*/
-
+const shadowHeader = () => {
+    const header = document.getElementById('header');
+    // Add a class if the bottom is gt than 50 of values
+    this.scrollY >= 50 ? header.classList.add('shadow-header'): header.classList.remove('shadow-header');
+}
+window.addEventListener('scroll', shadowHeader)
 
 /*=============== SWIPER POPULAR ===============*/
+const swiperPopular = new Swiper('.popular__swiper', {
+    loop: true,
+    grabCursor: true, 
+    slidesPerView: 'auto',
+    centeredSlides: 'auto',
+});
 
 
 /*=============== SHOW SCROLL UP ===============*/ 
